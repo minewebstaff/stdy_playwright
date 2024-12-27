@@ -17,8 +17,9 @@ class MiraiAdmin():
         self.page.get_by_role('textbox').locator('nth=1').fill(passwd)
         self.page.get_by_role('button').click()
 
-    def goto_application():
-        pass
+    def goto_application(self):
+        self.page.get_by_text("出願").get_by_text("出願確認").get_by_text("02．申込別志願者更新").click()
 
     def goto(self, url):
         self.page.goto(url)
+
